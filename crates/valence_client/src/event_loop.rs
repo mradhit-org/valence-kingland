@@ -12,12 +12,12 @@ use valence_core::protocol::{Decode, Packet};
 use crate::Client;
 
 pub(super) fn build(app: &mut App) {
-    app.add_event::<PacketEvent>()
-        .add_schedule(RunEventLoop, Schedule::new())
-        .add_schedule(EventLoopPreUpdate, Schedule::new())
-        .add_schedule(EventLoopUpdate, Schedule::new())
-        .add_schedule(EventLoopPostUpdate, Schedule::new())
-        .add_systems(RunEventLoop, run_event_loop);
+    // app.add_event::<PacketEvent>()
+    //     .add_schedule(RunEventLoop, Schedule::new())
+    //     .add_schedule(EventLoopPreUpdate, Schedule::new())
+    //     .add_schedule(EventLoopUpdate, Schedule::new())
+    //     .add_schedule(EventLoopPostUpdate, Schedule::new())
+    //     .add_systems(RunEventLoop, run_event_loop);
 
     app.world
         .resource_mut::<MainScheduleOrder>()
