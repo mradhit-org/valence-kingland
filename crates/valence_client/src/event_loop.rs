@@ -111,6 +111,7 @@ fn run_event_loop(
     let (mut clients, mut event_writer, mut commands) = state.get_mut(world);
 
     for (entity, mut client) in &mut clients {
+        dbg!("test");
         match client.connection_mut().try_recv() {
             Ok(Some(pkt)) => {
                 event_writer.send(PacketEvent {
